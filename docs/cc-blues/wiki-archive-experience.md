@@ -12,10 +12,17 @@ down, shows how they sit on top of each other, and lays out a build order where
 step by step** — using the Google Drive integration on `CC Blues Archive V2` as the
 single physical bus that all three share.
 
-The one-line version:
+The one-line version (corrected 2026-07-08 per Mr. Read):
 
-> **The Wiki** is the brain. **The Archive** is the record. **The Experience** is the world.
-> The Wiki knows, the Archive holds, the Experience shows.
+> There is **one private foundation** (~100x denser, for your eyes only) and **two
+> public renders of the same entries**: **the Archive** (a significantly-better-than-
+> Wikipedia text encyclopedia) and **the Experience** (the same entries with visuals,
+> in-browser, game-like — title pending). The foundation feeds both. `ccblues.com` is
+> the POC ancestor of both.
+
+The foundation still contains what earlier drafts called "the Wiki" (the LLM synthesis
+layer) plus the Vault, the Sources, the Master DB, and the research reports. The Archive
+and the Experience are **twins from one womb** — one entry schema, two skins.
 
 ---
 
@@ -52,6 +59,31 @@ itself, log operations, lint, and it holds a merged map of the whole estate plus
 census of every script. The synthesis content (artists/broadcasts/concepts) got a fresh
 seed pour. What is *not* yet built is the **front-facing Archive** and the **Experience**
 presentation on top of it. That is the rest of this doc.
+
+---
+
+## 1b. Where the information comes from — the six source layers
+
+The private foundation is not one thing; it is a refinement stack. Rawest → most refined:
+
+| # | Layer | Where | Scale | What it is |
+|---|-------|-------|-------|-----------|
+| ① | **Scholarly PDFs** | `CC Blues Archive/03 — Scholarly Sources` (+ `CC Blues Sources/pdfs`) | **39,448** files (`_parsed` 24,977, `_timelines` 13,803); 112 raw PDFs | The immutable bedrock. Paul Oliver *Aspects of the Blues Tradition*, Harry Smith *Anthology of American Folk Music*, Strachwitz *American Folk Music Occasional* 1 & 2, Wald, Lomax. |
+| ② | **Primary & personal** | `CC Blues Sources` | **8,904** files | `passages/` (2,521 quotable atoms), `passage_dossiers/` (322), `notebook/` (431 scans), `narrations/` (154), `extracted_text/` (391), `lyrics/`, `counter_critics/`. |
+| ③ | **AI deep research** | `CC Blues Archive/04 — Research Reports` | 234 files | Gemini Deep Research (127, **canon** per `_canon/2026-06-07_LOMAX_EQUALS_GEMINI_CANON.md`), GPT PDF Sourcing (18), Recording-Dates campaign (53), Perplexity, Wald, Influence Chains, Floating Verse. |
+| ④ | **Show research** | `CC Blues Archive/02 — Show Research` | 253 files | Per-show dispatches, subtheme CSVs, Pete enrichments → vault show pages (`show_001/show_overview.md`). |
+| ⑤ | **Structured spine** | `CC Blues Archive/01 — Master Database` | River/Rail/Record/Road workbooks | **You write this.** Roster, shows, tracks, stories. Agents read export copies only. |
+| ⑥ | **Editorial entity graph** | `CC Blues Vault` | **75,374** files | Obsidian typed-entity wiki: `05-Artists` (1,174), `06-Shows` (4,379), `07-Stories`, `08-Influences` (296), `09-References`, `10-FloatingVerses`, `_canon/` law. The LLM Wiki synthesizes *from* here. |
+
+**Provenance discipline already in place:** `sources:` frontmatter on every page,
+`[NEEDS SOURCE]` markers, `contradictions-found.md`, `_citations/`,
+`Copyright and Provenance/`, and `_canon/` rulings. This is what lets a public
+"better-than-Wikipedia" entry cite itself down to the passage.
+
+**The LLM synthesis Wiki** (`CC Blues Wiki/`, ~1,234 files: `artists/` 163,
+`broadcasts/` 78, `concepts/` 120, plus `atlas/ scripts/ campaigns/`) sits at the **top**
+of this stack — it is the distilled, cross-linked read of layers ①–⑥, and it is the
+direct feedstock the two public renders should generate from.
 
 ---
 
@@ -102,41 +134,43 @@ presentation on top of it. That is the rest of this doc.
 
 ### 2.4 Side by side
 
-| | **The Wiki** | **The Archive** | **The Experience** |
+| | **The Foundation** (private) | **The Archive** (public) | **The Experience** (public) |
 |---|---|---|---|
-| Metaphor | The brain | The record | The world |
-| Path / home | `CC Blues Wiki/` (`FINAL_ROOT`) | `CC Blues Archive/` (zones 01–99) | `yard.html` + sub-worlds (rendered) |
-| Written by | Agents (rent-party → Hammer merge) | **You** (curate/promote) | You (shell) + trickle from Archive |
-| Read by | Machines + us | The public | The visitor |
-| Form | Markdown + `search_index.json`, wikilinks | Curated pages, spreadsheets, exports | Spatial map, rails, sub-worlds |
-| Truth role | Proposes / synthesizes | **Publishes / canonizes** | Renders / presents |
-| Editable how | Automated, high-churn | Deliberate, low-churn, human | Generated from Archive/DB |
+| Metaphor | The bedrock + the brain | The encyclopedia | The world you walk |
+| Home | `CC Blues Wiki/` + Vault + Sources + Master DB + Reports | generated public site (Archive successor of the POC) | generated public site (visual/game twin) |
+| Entities | everything, ~100x denser, cited to passage | shows, artists, circles, scenes, records, reading, timelines | the **same** set, rendered spatially/visually |
+| Written by | Agents synthesize; **you** write the Master DB spine | generated from the foundation | generated from the foundation |
+| Read by | **you only** | the public | the public |
+| Form | Markdown + `search_index.json` + spreadsheets + PDFs | text-first entries ("better than Wikipedia") | visuals + in-browser interaction |
+| Role | **the source for both public renders** | reads the world | walks the world |
 
-The flow is a one-way ratchet: **Wiki → Archive → Experience.** Nothing skips a layer.
+The flow is **one foundation → two twin renders**: `Foundation → { Archive, Experience }`.
+The Archive and the Experience are the same entries with different skins; neither authors
+data, both generate from the foundation. Nothing public is authored directly.
 
 ---
 
-## 3. The integration model — one substrate, three layers
+## 3. The integration model — one substrate, one foundation, two renders
 
 Everything shares **one physical substrate: `CC Blues Archive V2` on Google Drive.**
-That is the whole point of the Google Drive integration — it is the **bus** the three
-layers talk over, so we never build a parallel store.
+That is the whole point of the Google Drive integration — it is the **bus** the foundation
+and both public renders talk over, so we never build a parallel store.
 
 ```
-                MASTER DATABASE (you write, Excel)          ← Zone 01 River/Rail/Record/Road
-                          │  export copies only
+   SOURCE LAYERS ①–⑥  (PDFs · passages · deep research · show research · Master DB · Vault)
+                          │  agents synthesize; you write the Master DB spine
                           ▼
-                 cc-blues-db  (promoted DB / working_index.assembly.sqlite)
-                          │
-        ┌─────────────────┼──────────────────────────┐
-        ▼                 ▼                           ▼
-  (1) THE WIKI       search_index.json          yard.html generator
-  agents synthesize   (wiki_index.py)           (spatial render)
-        │                                            │
-        │ you promote verified entries               │ trickle content
-        ▼                                            ▼
-  (2) THE ARCHIVE  ──────────────────────────►  (3) THE EXPERIENCE
-   canonical record        renders as              spatial world / sub-worlds
+                 THE LLM WIKI  (CC Blues Wiki/ — distilled, cited, cross-linked)
+                          │  wiki_index.py → search_index.json
+                          ▼
+              ┌───  THE ENTRY SCHEMA  ───┐     ← the one back-end presentation you own
+              │   (one entry format,     │
+              │    two renderers)        │
+              ▼                          ▼
+      (A) THE ARCHIVE            (B) THE EXPERIENCE
+       text encyclopedia          same entries + visuals, in-browser
+       (public website)           (public, game-like, title pending)
+              └──────── ccblues.com POC is the shared ancestor of both ────────┘
 ```
 
 **Google Drive is the integration layer, doing three concrete jobs:**
@@ -147,83 +181,87 @@ layers talk over, so we never build a parallel store.
 2. **Write bus / staging.** Agent output lands in `_returns/` (rent-party pattern) or a
    `00-Inbox/` campaign folder; a **merge step** ("Hammer") promotes into the canonical
    home. This is already how RP11 worked.
-3. **Presentation source.** The back-end presentation (Experience) is **generated from**
-   the promoted DB and the Archive — `yard.html` already does exactly this. New sub-worlds
-   read the same source, so building the shell once lets any Archive content trickle in.
+3. **Presentation source.** Both public renders are **generated from** the foundation —
+   the `cc-blues-poc` build already proves this (`build_lean_site.py` → lean `data/` →
+   static `site/` on Netlify, with per-show pages and cover art). The Archive and the
+   Experience are its grown-up successors, reading the same source.
 
 ---
 
 ## 4. How to complete each — complementary, step by step
 
-Design principle you set: **you build the back-end presentation of everything first,
-then we trickle content piece by piece.** So each track below is ordered *scaffold → pour*.
+Design principle you set: **you build the back-end presentation of everything first**
+(the one entry schema both renders share), **then we trickle content piece by piece.**
 
-### Track A — Finish the Wiki (the brain) — _mostly wired; needs discipline_
+### Track 0 — Harden the foundation — _mostly wired as of yesterday; needs discipline_
 
-1. **Lock the tool loop.** Make `wiki_index.py --check`, `wiki_lint.py`, and `wiki_log.py`
-   the required close-out of every pour. (Nervous system exists as of yesterday — just enforce it.)
-2. **Resolve `contradictions-found.md` and `open-questions.md`** into either Archive facts
-   or explicit `[NEEDS SOURCE]` holds. Don't let them rot.
-3. **Triage `registry.md`** — 97 UNKNOWN scripts. Decide LIVE/DEAD so the machinery census
-   stops being noise. Move DEAD to `graveyard.md`.
-4. **Standardize frontmatter + wikilinks** so `search_index.json` is complete — this JSON is
-   what the Archive and Experience will query. **This is the contract; harden it first.**
+1. **Lock the Wiki tool loop.** Make `wiki_index.py --check`, `wiki_lint.py`, `wiki_log.py`
+   the required close-out of every pour.
+2. **Resolve `contradictions-found.md` / `open-questions.md`** into facts or explicit
+   `[NEEDS SOURCE]` holds.
+3. **Triage `registry.md`** (97 UNKNOWN scripts → LIVE/DEAD; DEAD to `graveyard.md`).
+4. **Standardize frontmatter + `sources:`** so `search_index.json` is complete and every
+   claim is cited to a source layer (①–⑥). This JSON is what both renders read.
 
-### Track B — Build the front-facing Archive (the record) — _the back-end presentation you own_
+### Track 1 — The entry schema — _the one back-end presentation you own (do this first)_
 
-1. **Define the Archive schema / template** — the canonical page shape a reader sees
-   (artist, show, source, concept). **This is "the back-end presentation of everything."** Build it once.
-2. **Set the promotion gate.** One rule: an entry appears in the Archive only when its Wiki
-   page is `status: verified` with real `sources`. Wiki proposes → you approve → Archive publishes.
-3. **Wire the trickle.** A generator reads `search_index.json` + Master DB exports and emits
-   Archive pages into the template. Start with **one zone end-to-end** (suggest **01 River /
-   artists** — richest, 163 wiki pages ready) to prove the pipe.
-4. **Pour piece by piece.** Once one zone is real, the rest is repetition: broadcasts, then
-   concepts, then sources. No new architecture per zone.
+1. **Design one entry format** covering all public entity types: **shows, artists, circles,
+   scenes, records, reading content, timelines** (+ more). One schema → two renderers.
+2. **Decide the render split:** the Archive consumes the entry as **text-first HTML**; the
+   Experience consumes the **same entry** as a visual/interactive node. Same data, two skins.
+3. **Set the promotion gate** (see §5 decision B): recommend **auto-draft, you release** —
+   verified entries auto-stage as unpublished drafts; you flip batches live.
 
-### Track C — Grow the Experience (the world) — _shell now, content trickles_
+### Track 2 — The Archive (public text encyclopedia) — _prove the pipe on one entry_
 
-1. **Promote `yard.html` to the map shell.** It already renders the rail-yard from the
-   promoted DB — make it the front door and the navigation spine for River/Rail/Record/Road.
-2. **Stand up empty sub-world shells** for each world, reading the same DB/Archive source.
-   Empty is fine — the point is the shell exists so content has somewhere to land.
-3. **Bind Experience tiles to Archive pages.** Each spatial node links to its Archive page
-   (which is backed by its Wiki page). Click a stop on the rail → the published record opens.
-4. **Trickle spatial content** as Archive zones go live in Track B. Experience never authors —
-   it only renders what the Archive has published, so it fills in automatically as B advances.
+1. Take **one artist** fully end-to-end: foundation → entry → published Archive page.
+   Artists first — most fuel (163 Wiki + 1,174 Vault artist files) and the clearest place
+   to beat Wikipedia (passages, narrations, citation dossiers they lack).
+2. Then repeat across the roster → Shows → Records/Timelines. No new architecture per type.
+
+### Track 3 — The Experience (public visual/game twin) — _same entries, visual skin_
+
+1. Point the **visual renderer** at the exact same entry the Archive uses; render the one
+   proven artist as a visual/interactive node (build on `cc-blues-poc` covers + the rail views).
+2. Grow the spatial map (River/Rail/Record/Road) as entries go live — it fills automatically
+   as Track 2 advances, because it authors nothing.
 
 ### The complementary loop
 
 ```
-Agents pour → Wiki (Track A)  →  you verify/curate → Archive (Track B)  →  auto-renders → Experience (Track C)
-     ▲                                                                                          │
-     └───────────────────  gaps the Experience exposes become open-questions in the Wiki  ─────┘
+Agents synthesize → Wiki (Track 0) → entry schema (Track 1) → you release verified drafts
+        ▲                                        │
+        │                                        ├──► Archive page   (Track 2, text)
+        │                                        └──► Experience node (Track 3, visual)
+        └────  gaps either render exposes become open-questions back in the Wiki  ────┘
 ```
 
-Build order: **A is essentially done** (harden it) → **B is the real work and the part you
-own (the template + promotion gate)** → **C is cheap once B produces pages** (shell + bind).
-Everything rides the Google Drive integration on `CC Blues Archive V2`; nothing needs a
-second store.
+Build order: **Track 0 is essentially done** (harden it) → **Track 1 is the real work you
+own** (one entry schema + promotion gate) → **Tracks 2 & 3 are twin renderers** that get
+cheap once the schema exists. Everything rides the Google Drive integration on
+`CC Blues Archive V2`; nothing needs a second store.
 
 ---
 
-## 5. Immediate next moves (smallest useful steps)
+## 5. Decisions — talked through (2026-07-08)
 
-1. **Confirm the naming** in §2 matches how you think of them — then this doc is the shared
-   vocabulary (Wiki = brain, Archive = record, Experience = world).
-2. **Design the Archive page template** (Track B1) — the one back-end presentation shape.
-   Everything downstream keys off it.
-3. **Pick the first zone to take end-to-end** — recommend **River / artists** (163 Wiki pages
-   already seeded, so the trickle has fuel).
+- **A. Archive form → published website.** Confirmed by Mr. Read: the only public text is a
+  significantly-better-than-Wikipedia encyclopedia. The Experience is its visual twin. Both
+  generate from one entry schema. (Not curated Drive pages.)
+- **B. Promotion gate → recommend "auto-draft, you release."** Verified entries auto-stage
+  as drafts; you flip them live in batches. Keeps your editorial veto without mechanical work.
+  _(Open for your call: manual-only vs. auto-on-verified vs. auto-draft.)_
+- **C. First entity → Artists (River).** Most fuel and the clearest "better than Wikipedia"
+  win. Prove the full pipe on one artist, then repeat.
+
+## 6. Blockers & immediate next moves
+
+1. **`ccblues.com` is unreachable from this environment** — the network policy denies the
+   connection at the proxy (`connect_rejected`, gateway 403). To let me study the live POC,
+   add `ccblues.com` to the environment's allowed domains (Claude Code on the web settings:
+   https://code.claude.com/docs/en/claude-code-on-the-web). I learned the POC's shape from
+   Drive regardless (`cc-blues-poc`: lean static site, Netlify, per-show pages + covers).
+2. **Design the one entry schema** (Track 1) — everything downstream keys off it.
+3. **Confirm decision B** (the promotion gate) so the generator knows its publish trigger.
 4. **Decide where the working scribe/spec lives in Drive** — `CC Blues Vault/00-Inbox/` as a
    new campaign (matches the rent-party pattern), or `CC Blues Wiki/` root.
-
----
-
-### Open questions for you
-
-- Is the **front-facing Archive** a set of curated Drive pages, a **published website**, or
-  both? (It changes whether Track B emits Markdown, HTML, or DB rows.)
-- Is the **Experience** one map with sub-worlds, or separate deployables that share the map shell?
-- Should the **promotion gate** (Wiki→Archive) be manual (you approve) or rule-based
-  (`status: verified` auto-promotes)?

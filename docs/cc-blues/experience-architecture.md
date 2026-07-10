@@ -35,8 +35,8 @@ different historical question. One subject can appear in all six.
 | **RAIL** | assembles | How is this history assembled into a journey? (the archive's own structure: show trains, cars, yard, roundhouse) |
 | **RIVER** | carries | How do songs, practices, memories, influences flow through time? (continuity without a single origin) |
 | **ROAD** | moves | Where did people, songs, instruments, labor, markets travel? (migration, touring, the automobile, the *broken* road) |
-| **RECORD** | fixes | What survives, and how did sound become object, commodity, evidence? (session → matrix → label → reissue) |
-| **READING** | interprets | Who explained the blues, what did they argue, how did it shape belief? (scholarship, collecting, the Argument Wall) |
+| **RECORD** | **spins** | What survives as sound made into things? Labels, discs, vinyl, sheet music & piano rolls, field discs, unissued takes — the chain performance → take → object → reissue. (Verb locked 2026-07-10; "fixes" and "keeps" rejected.) |
+| **READING** | **tells** | Who has told this history — as ledger (facts), witness (firsthand), or argument (interpretation)? ("Interprets" rejected as over-claiming; "tells" covers all three registers.) |
 | **RADIO** | transmits | What could people hear, where, placed by whom, with what effect? (broadcast as listening history) |
 
 - **The Concourse** is the homepage/transfer point — the Florence, AL depot at night, six

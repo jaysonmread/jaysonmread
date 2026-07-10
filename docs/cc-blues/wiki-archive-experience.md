@@ -26,8 +26,8 @@ and the Experience are **twins from one womb** — one entry schema, two skins.
 
 > **Refinement (2026-07-08, per the ChatGPT 5.6 review — see `experience-architecture.md`):**
 > the twins are closer than "two skins." The **Experience is six navigable worlds**
-> (RAIL assembles · RIVER carries · ROAD moves · RECORD fixes · READING interprets ·
-> RADIO transmits), and the **Archive is the Experience's `READ MODE`** — the same entries'
+> (RAIL assembles · RIVER carries · ROAD moves · RECORD spins · READING tells ·
+> RADIO transmits — verbs locked 2026-07-10), and the **Archive is the Experience's `READ MODE`** — the same entries'
 > callouts + citations flattened into an accessible linear article. One entry, one build,
 > two views (spatial + linear).
 

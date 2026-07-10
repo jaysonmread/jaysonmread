@@ -24,6 +24,13 @@ The foundation still contains what earlier drafts called "the Wiki" (the LLM syn
 layer) plus the Vault, the Sources, the Master DB, and the research reports. The Archive
 and the Experience are **twins from one womb** — one entry schema, two skins.
 
+> **Refinement (2026-07-08, per the ChatGPT 5.6 review — see `experience-architecture.md`):**
+> the twins are closer than "two skins." The **Experience is six navigable worlds**
+> (RAIL assembles · RIVER carries · ROAD moves · RECORD fixes · READING interprets ·
+> RADIO transmits), and the **Archive is the Experience's `READ MODE`** — the same entries'
+> callouts + citations flattened into an accessible linear article. One entry, one build,
+> two views (spatial + linear).
+
 ---
 
 ## 1. What we made yesterday (2026-07-07 → early 07-08)

@@ -96,7 +96,9 @@ facets:
   era:     ["songster", "1930s–40s folk revival"]
   scenes:  [scene:shreveport-fannin-street, scene:nyc-folk-revival]   # makers' OWN venues/circuits
   lineage: [artist:blind-lemon-jefferson]                              # kinship/influence as makers traced it
-world: River                        # Master-DB partition (River=roster). NAV is primary_node+facets, not world.
+worlds: [rail, river, road, record, reading, radio]   # which of the SIX worlds this entry renders into
+                                    # (see experience-architecture.md). The car below is the RAIL face.
+callout_type: person                # place | person | sound | system | question  — drives map marker shape
 
 # —— importance (codex-score API; §5) — this is how we state importance, NOT prose metaphor ——
 api_score: 0                        # 0–100 (min-max normalized)

@@ -42,9 +42,28 @@ Two laws govern the whole apparatus:
 | 11 | Revisionist historiography | 2000s– | Wald, Hamilton, Filene, Miller, Gussow, Abbott & Seroff (Black press method), M. Morrison (*Blacksound*) | correct the canon's making | the lens turned on the collectors and the industry itself |
 | 12 | Witness literature | 1941– | Handy (*Father of the Blues*), Broonzy, Willie Dixon, Honeyboy Edwards | testify / manage legacy | artists' own accounts, with mediation *inside* the witness (co-writers, audiences performed to) |
 
+| 13 | **Revival practitioner-writers** | 1940s– | Woody Guthrie (*Bound for Glory*, the *Woody Sez* columns), Pete Seeger (*The Incompleat Folksinger*, decades of Sing Out!), Bob Dylan (*Chronicles*, the Nobel lecture), John Fahey (Patton thesis, "The Nature of Reality," *How Bluegrass Music Destroyed My Life*) | testify + reclaim + self-mythologize | performer-historians: insiders of the *revival*, mediators of the *blues*, with real economic stakes (publishing, labels, royalties) — prolific writers whom v0.1 wrongly omitted |
+
 Notes:
 - A work can hold membership in several camps (Gussow is 8 + 11 + a practicing harmonica
   player — practitioner positionality he analyzes himself).
+- **John Fahey is a special case: camp-straddler AND lawgiver.** As author he spans 3
+  (rediscovery participant — located Skip James and Bukka White; Takoma/Revenant label
+  operator = economic stake), 8 (the Patton thesis is formal musicological analysis — Tier 1
+  in sources.csv, 763 claims, OCR-rescued), 13 (essayist), and he *satirized* camp 3 from
+  inside it (Blind Joe Death). But in this archive he is also **epistemological law**: the
+  Koonaklaster (from "The Nature of Reality," captured locally) is the standing guardrail —
+  R11 no each-to-all edges; R12 corpus-boundary ("the Anthology was southeastern-weighted
+  while wearing the nation's name… No Readville"); R13 circularity caveat (describing a
+  people from their recorded performances is probably circular — every synthesis is a
+  reading, not THE reading). **Greil Marcus is his structural foil** — asserted worlds vs.
+  enumerated edges; the Marcus→Hutchison projection is kept as a REJECTED exhibit. The
+  Guiding Lights table should seat Fahey as a guide of the archive's *method*, not merely a
+  Patton biographer.
+- **Pete Seeger is both a source and the archive's narrator mask** (the Pete-voice, the
+  steward-posture lodestar). Per R13 — visible masks, never a hidden narrator — the public
+  self-dossier (§6) must disclose that the narrating voice is a curated register modeled on
+  a camp-13 member, with eyes open to the revival's failures.
 - **The archive's own shelf is positioned**: the Framing Standard's grounds (Morrison, Hunt,
   Gussow, Miller, Filene, Hamilton + Maultsby/Wilson/Ramsey) place CC Blues in the lineage of
   camps 1 and 11. The Reading world states this publicly (see §6) instead of floating above it.
@@ -154,6 +173,67 @@ promotion-gate policy live in public.
    reconcile rulings, promote to `ratified`, log via the wiki tool loop.
 6. **Feed the corpus**: dossiers join the 39k-file scholarly zone / 2,521 passages as the
    *interpretive index over* them — the dossier layer is what makes that mass navigable.
+
+## 7b. Corpus grounding — what the shelf actually holds, and the holes (audited 2026-07-10)
+
+**Registry of record: `sources.csv`** (Zone 03 `_parsed`; 162,563 claims). v0.1's exemplars
+were drawn from general knowledge, not this registry — corrected here. Camp assignments and
+hole-hunting must always run against sources.csv, not memory.
+
+**Where the corpus is genuinely strong** (grounded, with claim counts):
+- **Reference ledger**: Komara *Encyclopedia of the Blues* (Tier 1, 43,365 claims), Rolling
+  Stone guide (20,855), New Encyclopedia of Southern Culture: Music (4,123).
+- **Camp 4 (British documentary), in depth**: Oliver ×4 (*Aspects* 3,808, *Story of the
+  Blues* 3,607, *Savannah Syncopators*, plus O'Connell's 2015 *biography of Oliver* — the
+  corpus can already do historiography-of-Oliver), Rowe *Chicago Breakdown*, Leadbitter &
+  Slaven *Blues Records 1943–1966*.
+- **Camp 3 (rediscovery), watchable in motion**: Charters ×4 (1959/1963/1967/1977 — the
+  romance evolving across two decades), Cook 1973, Oster 1969.
+- **Camp 5 (ledger)**: Dixon & Godrich *Blues & Gospel Records 1902–1942* AND *Recording the
+  Blues*, Taft's concordance, Ford bibliography, Calt *Barrelhouse Words* (Tier 1).
+- **Camps 6/8/11 partially**: Baraka 1963 (2,469), Titon *Down Home Blues*, Ferris, Gussow
+  2020 (5,299), Wald 2010, Filene (registered), Julia Simon 2023, Huber, Retman, Palmer.
+- **Witness seeds**: Perry Bradford *Born with the Blues* (1,682!), Alberta Hunter, Handy's
+  *Blues: An Anthology*, Lomax 1936, *Blues in the Mississippi Night* liner.
+- **The Woody research bed** (registered, largely unparsed): Klein Tier 1, Reuss, Briley,
+  Pascal, Blake dissertation, Smithsonian liner corpus, Nora Guthrie oral history.
+- **Web-archive era**: ~28 OIA dossiers (Tier 3, correctly flagged AWAITING_WALT_VERIFICATION).
+
+**THE HOLES — Priority 1 (absences that strain the archive's own laws):**
+1. ***Lost Delta Found*** (Work/Jones/Adams, 2005) — the recovered Black Fisk fieldwork
+   buried under Lomax's name. The positionality apparatus's keystone exhibit is not on the shelf.
+2. **Calt & Wardlow, *King of the Delta Blues: The Life and Music of Charlie Patton*** —
+   without it, Patton claims single-source to the Tier-1 Fahey thesis (violates the
+   independence rule the corroboration badge depends on).
+3. **Alan Lomax, *The Land Where the Blues Began*** (1993) — the late self-canonizing Lomax;
+   the archive cites the Lomax lens constantly but holds no dossier-able late-Lomax text.
+4. **Murray *Stomping the Blues* + Ellison's essays** — the affirmation school is *entirely
+   absent*, yet the Framing Standard's "conscious critique, not victimhood" is their position.
+   The law cites a camp the corpus doesn't hold.
+5. **Hamilton *In Search of the Blues*; Miller *Segregating Sound*** (and parse Filene) —
+   the Framing Standard's own grounds, absent as texts.
+6. **Wald *Escaping the Delta*** (2004) — only the Very Short Introduction is present.
+7. **Greil Marcus (*The Old, Weird America*)** — Marcus is half of the archive's
+   Marcus–Fahey arbitration and a REJECTED-exhibit subject, but no Marcus text is registered.
+
+**Priority 2 (camp-13 primaries — scholarship ABOUT them exists; THEY are missing):**
+8. Seeger: *The Incompleat Folksinger*, Sing Out! columns, *Where Have All the Flowers
+   Gone* — the archive's narrator voice has no parsed primary shelf.
+9. Woody: ***Bound for Glory***, collected *Woody Sez*, *Born to Win*, *Pastures of Plenty*.
+10. Dylan: *Chronicles Vol. 1*; the Nobel lecture as a standalone source.
+11. ***Hard Hitting Songs for Hard-Hit People*** — Lomax compiled, Woody annotated, Seeger
+    transcribed; all three practitioner-writers in one object; unpublished 1940→1967.
+12. Fahey: *How Bluegrass Music Destroyed My Life*; the Revenant Patton box
+    (*Screamin' and Hollerin' the Blues*) writings.
+13. Szwed's Lomax biography; Porterfield's John Lomax biography (cited in harvests, unheld).
+
+**Priority 3 (canon depth):** Keil *Urban Blues* (1966, the anti-romantic urban corrective);
+Evans *Big Road Blues*; Abbott & Seroff (*Out of Sight*, *The Original Blues* — pre-1920
+Black-press bedrock); Harrison *Black Pearls* + Carby (parse Davis 1998, already registered);
+the witness shelf (Handy *Father of the Blues*, Broonzy, Willie Dixon, Honeyboy, B.B.);
+the 1920s academic collectors (Odum & Johnson, Scarborough, Newman White); Hurston *Mules
+and Men*; Wardlow *Chasin' That Devil Music*; Baker / Woods / Garon; Cantwell *When We Were
+Good*; Ronald Cohen *Rainbow Quest*; a *Living Blues* / *Blues Unlimited* run.
 
 ## 8. Open threads
 
